@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Transmission System - Secure Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #4A90E2, #50E3C2);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100vh;
+            color: #ffffff;
+        }
+        .header, .footer {
+            width: 100%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+        }
+        .header h1, .footer p {
+            margin: 0;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+        }
+        h1 {
+            color: #007BFF;
+            font-size: 24px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+            color: #333;
+        }
+        input[type="file"] {
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        li {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>CONTEXT-AWARE HYBRID CRYPTOGRAPHY WITH ADAPTIVE BIOMETRIC SECURITY FOR DYNAMIC FILE STORAGE ENVIRONMENTS</h1>
+    </header>
+    <main class="container">
+        <h1>Secure Login</h1>
+        <form method="POST" enctype="multipart/form-data" action="/login">
+            <label for="fingerprint">Upload Fingerprint for Secure Login:</label>
+            <input type="file" id="fingerprint" name="fingerprint" accept="image/*" required>
+            <button type="submit">Login</button>
+        </form>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+        {% endwith %}
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Secure File Transmission System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
